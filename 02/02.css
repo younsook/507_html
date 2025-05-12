@@ -24,6 +24,13 @@ h2[class]{
     padding: 20px;
     /* 바깥여백 */
     margin: 20px;
+    
+    /* 패딩과 테두리를 포함한 width, height */
+    box-sizing: border-box;
+    /* 디스플레이의 플랙스 박스로 바꾸면 수평수직의 축을 변경가능 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .g2 {
     background-color: burlywood;
@@ -42,4 +49,43 @@ footer > ul {
 /* 그룹 */
 #s1, #s2{
     background-color: gray;
+}
+/* 인라인스타일 변경 */
+/* strong{
+     태그속 w,h는 적용안됨, 그때 display inline 사용 
+    display: inline-block; 
+    background-color: brown;
+    color: white;
+
+    width: 50%;
+    height: 40px;
+} */
+
+
+
+/* 웹폰트사용 */
+article > p {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* div로 묶은 fbox 박스 설정 */
+.fbox {
+    display: flex; /*블록요소를 옆으로 할수있는것 flex*/
+    flex-direction: row; /* flex-direction: column; 디폴트, 아래로보이는것 */
+    
+}
+.fbox > div {
+    margin-right: 20px;
+}
+/* 이미지 둥글게 */
+img {
+    border-radius: 50%; /* 모서리 둥글게 */
+}
+
+ul > li{
+    /* margin-left: 20px; */
+    list-style: none;
+    display: flex;
 }
