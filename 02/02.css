@@ -1,0 +1,45 @@
+/* 전체 선택자 */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+/* 조상 자손 선택자 */
+header ul {
+            background-color:rgb(10, 110, 97);
+            color: white;
+        }
+        /* 속성 선택자 */
+h2[class]{
+    color:yellow;
+}
+/* 클래스 선택자 */
+.g1 {
+    /* 배경색과 글자색 */
+    background-color: blueviolet;
+    color: aliceblue;
+    /* 가로, 세로 */
+    width: 50%;
+    height: 80px;
+    /* 안쪽 여백 */
+    padding: 20px;
+    /* 바깥여백 */
+    margin: 20px;
+}
+.g2 {
+    background-color: burlywood;
+    color: aliceblue;
+}
+/* 아이디 선택자 */
+#html {
+    background-color: rgb(53, 167, 119);
+    color: white;
+}
+/* 부모 자식 선택자 */
+footer > ul {
+    background-color: black;
+    color: white;
+}
+/* 그룹 */
+#s1, #s2{
+    background-color: gray;
+}
