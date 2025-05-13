@@ -1,0 +1,64 @@
+header, main, footer{
+    margin-left: 10px;
+    width: 60%;
+    border: 1px solid blue;
+    margin-top: 10px;  /* 박스 위에 여백을 주기위해 마진을 설정 */
+}
+
+
+header{
+    background-color: rgb(230, 228, 228);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    height: 70vh;
+    /* vh 화면의 수직의 높이를 지정 */
+}
+
+
+main a {
+    text-decoration: none;
+}
+main ul {
+    list-style: none; 
+    width: 80%;
+    margin-left: 5%;
+}
+main li {
+    border: 1px dotted gray;
+    padding: 10px;
+    margin: 5px 0px;
+}
+
+main li:hover{
+    background-color: aliceblue;
+}
+footer > ul{
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    padding: 5px 10px;
+}
+
+
+
+footer a {
+    text-decoration: none;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+#inf {
+    background-color: blue;
+}
+
+footer a:hover, #inf:hover {
+    background-color: gold;
+    color: black;
+}

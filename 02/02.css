@@ -1,17 +1,26 @@
 * {
     padding: 0%;
     margin: 0%;
+    /* 밖같쪽 마진. */
 }
 
 body {
     width: 80%;
     margin-left: 10%;
-    
+
 }
+
 /* , 콤마 : 그룹으로 묶을수 있다. */
-header, main { 
+header,
+main {
     background-color: aliceblue;
-    box-sizing: border-box; /* 패딩이 밖으로 먹지않게, 내가 정해둔사이즈 안으로 먹게 정의를 해둠. */
+    box-sizing: border-box;
+    /* 패딩이 밖으로 먹지않게, 내가 정해둔사이즈 안으로 먹게 정의를 해둠. */
+    border: 1px aliceblue solid;
+}
+
+main {
+    margin-bottom: 0px;
 }
 
 ul {
@@ -20,6 +29,161 @@ ul {
 
 header {
     display: flex;
-    justify-content :space-between; /* 축방향 정렬 : 양쪽방향으로 정렬 */
+    justify-content: space-between;
+    /* 축방향 정렬 : 양쪽방향으로 정렬 */
     padding: 20px;
 }
+
+nav {
+    display: flex;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav li {
+    /* 같다 nav > ul > li  */
+    padding: 5px;
+    /* 안쪽 여백 */
+    margin: 2px;f
+    /* 바깥 여백 */
+}
+
+article {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+article h1 {
+    display: flex;
+    justify-content: center;
+    /* 축방향 정렬 : 가운데 정렬 */
+}
+
+article p {
+    padding: 30px 50px;
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+}
+
+#menu1 a {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#menu1 a:hover {
+    background-color: brown;
+}
+
+#menu2 a {
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#menu2 a:hover {
+    /* id 경우 # 샾으로 시작 */
+    background-color: brown;
+}
+
+.textred {
+    /* class 경우 . 쩜으로 시작 */
+    color: red;
+}
+
+section {
+    background-color: white;
+    margin: 30px;
+    /*박스 밖 여백*/
+    padding: 20px;
+    /*박스 안쪽으로 들어오게 패딩*/
+    border-radius: 15px;
+}
+
+section>h2 {
+    margin-bottom: 20px;
+    background-color: rgb(223, 223, 223);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fbox {
+    display: flex;
+}
+
+.fbox>div {
+    margin-right: 10px;
+    margin-left: 30px;
+    width: 20%;
+    /* width 값을 주고 박스에 마진 설정 */
+}
+
+.fbox>p {
+    width: 80%;
+    height: 150px;
+    /*옆 img 높이를 확인 후 높이를 지정해줘야. align 가능 */
+    /* border: 1px black solid; */
+    display: flex;
+    align-items: center;
+}
+
+.fbox>span {
+    display: contents;
+    color: blue;
+    font-weight: bold;
+}
+
+img {
+    border-radius: 50%;
+}
+
+footer {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+footer>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* 
+html 제목
+section h2{ 
+    padding:5px 10px;
+}
+
+<!--html 배경 
+#s1, #s2, #s3, #s4 {
+    background-color: white;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+<!-- html im p를 싸고있는 박스 
+.fbox {
+    display: flex;
+    padding-left: 50px;
+    padding-bottom: 15px;
+}
+
+.fbox img {
+    border-radius: 50%;
+}
+
+section p {
+    padding: 30px;
+}
+ */
