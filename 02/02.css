@@ -1,91 +1,25 @@
-/* 전체 선택자 */
 * {
-    padding: 0px;
-    margin: 0px;
-}
-/* 조상 자손 선택자 */
-header ul {
-            background-color:rgb(10, 110, 97);
-            color: white;
-        }
-        /* 속성 선택자 */
-h2[class]{
-    color:yellow;
-}
-/* 클래스 선택자 */
-.g1 {
-    /* 배경색과 글자색 */
-    background-color: blueviolet;
-    color: aliceblue;
-    /* 가로, 세로 */
-    width: 50%;
-    height: 80px;
-    /* 안쪽 여백 */
-    padding: 20px;
-    /* 바깥여백 */
-    margin: 20px;
-    
-    /* 패딩과 테두리를 포함한 width, height */
-    box-sizing: border-box;
-    /* 디스플레이의 플랙스 박스로 바꾸면 수평수직의 축을 변경가능 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.g2 {
-    background-color: burlywood;
-    color: aliceblue;
-}
-/* 아이디 선택자 */
-#html {
-    background-color: rgb(53, 167, 119);
-    color: white;
-}
-/* 부모 자식 선택자 */
-footer > ul {
-    background-color: black;
-    color: white;
-}
-/* 그룹 */
-#s1, #s2{
-    background-color: gray;
-}
-/* 인라인스타일 변경 */
-/* strong{
-     태그속 w,h는 적용안됨, 그때 display inline 사용 
-    display: inline-block; 
-    background-color: brown;
-    color: white;
-
-    width: 50%;
-    height: 40px;
-} */
-
-
-
-/* 웹폰트사용 */
-article > p {
-  font-family: "Nanum Pen Script", cursive;
-  font-weight: 400;
-  font-style: normal;
+    padding: 0%;
+    margin: 0%;
 }
 
-/* div로 묶은 fbox 박스 설정 */
-.fbox {
-    display: flex; /*블록요소를 옆으로 할수있는것 flex*/
-    flex-direction: row; /* flex-direction: column; 디폴트, 아래로보이는것 */
+body {
+    width: 80%;
+    margin-left: 10%;
     
 }
-.fbox > div {
-    margin-right: 20px;
-}
-/* 이미지 둥글게 */
-img {
-    border-radius: 50%; /* 모서리 둥글게 */
+/* , 콤마 : 그룹으로 묶을수 있다. */
+header, main { 
+    background-color: aliceblue;
+    box-sizing: border-box; /* 패딩이 밖으로 먹지않게, 내가 정해둔사이즈 안으로 먹게 정의를 해둠. */
 }
 
-ul > li{
-    /* margin-left: 20px; */
+ul {
     list-style: none;
+}
+
+header {
     display: flex;
+    justify-content :space-between; /* 축방향 정렬 : 양쪽방향으로 정렬 */
+    padding: 20px;
 }
