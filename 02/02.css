@@ -9,6 +9,20 @@ body {
     margin-left: 10%;
 
 }
+/* 반응형 웹 */
+@media screen and (max-width: 1024px){
+    body{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+/* 반응협 웹 mobile */
+@media screen and (max-width: 767px){
+    body{
+        width: 100%;
+        margin-left: 5%;
+    }
+}
 
 /* , 콤마 : 그룹으로 묶을수 있다. */
 header,
@@ -16,7 +30,7 @@ main {
     background-color: aliceblue;
     box-sizing: border-box;
     /* 패딩이 밖으로 먹지않게, 내가 정해둔사이즈 안으로 먹게 정의를 해둠. */
-    border: 1px aliceblue solid;
+    border: 1px aliceblue solid;  
 }
 
 main {
@@ -157,6 +171,7 @@ footer>ul {
     align-items: center;
     flex-direction: column;
 }
+
 
 
 /* 

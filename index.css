@@ -1,5 +1,5 @@
 header, main, footer{
-    margin-left: 10px;
+    margin-left: 20%;
     width: 60%;
     border: 1px solid blue;
     margin-top: 10px;  /* 박스 위에 여백을 주기위해 마진을 설정 */
@@ -44,21 +44,21 @@ footer > ul{
 }
 
 
-
 footer a {
     text-decoration: none;
     background-color: green;
     color: white;
     border-radius: 5px;
     padding: 5px 10px;
-    margin: 5px;
+    margin: 0px 5px;
 }
 
-#inf {
-    background-color: blue;
-}
 
 footer a:hover, #inf:hover {
     background-color: gold;
     color: black;
+}
+
+#inf {
+    background-color: blue;
 }
