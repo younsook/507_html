@@ -1,0 +1,20 @@
+main {
+    display: flex;
+    flex-direction: column; /* div가 수직방향으로 가고싶어 */
+    justify-content: center;
+    align-items: center; /* 수평정렬 */
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: brown;
+    cursor:pointer;     /* 마우스 오버시 손모양으로 */
+    
+}

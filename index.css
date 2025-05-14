@@ -14,8 +14,7 @@ header{
 }
 
 main {
-    height: 70vh;
-    /* vh 화면의 수직의 높이를 지정 */
+    height: 70vh; /* vh 화면의 수직의 높이를 지정 */
 }
 
 
