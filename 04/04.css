@@ -1,4 +1,4 @@
-form{
+form, main > div{
     width: 100%;
     display: flex;
     flex-direction: column; /*세로축으로*/
@@ -23,4 +23,15 @@ form{
 button {
     width: 300px;
     margin: 0px 10px;
+}
+
+.bt04 {
+    width: 30%;
+    height: 40px;
+    margin: 0px 5px;
+}
+
+/*[속성] 대괄호*/
+[readonly]{
+    background-color:beige;
 }
