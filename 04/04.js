@@ -10,15 +10,18 @@ const check1 = (e) => {
     //문자열 반복문
     let s ='';
     //뒤에서부터 하나씩 읽어왔다.
-    for (let i=txt1.length - 1; i >= 0;i--){
-        //console.log(txt1[i]);
-        s = s + txt1[i];
-    }
-    // s = txt1.split(''); 배열로 활용
+    // for (let i=txt1.length - 1; i >= 0;i--){
+    //     //console.log(txt1[i]);
+    //     s = s + txt1[i];
+    // }
 
-
+    //s = txt1.split(''); //배열로 활용 (반복문대신) 
+    //reverse() 뒤집어서 하나씩
+    //join 그것을 묶어서
+    s = txt1.split('').reverse().join();
     console.log(s);
     
+
     //문자열 비교
     // 같으면 회문이다.
     if (txt1 == s){
