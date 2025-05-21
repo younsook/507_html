@@ -1,8 +1,9 @@
 header, main, footer{
     margin-left: 20%;
     width: 60%;
-    border: 1px solid blue;
+    border: 1px solid rgb(125, 125, 128);
     margin-top: 10px;  /* 박스 위에 여백을 주기위해 마진을 설정 */
+    border-radius: 15px;
 }
 
 
@@ -15,6 +16,7 @@ header{
 
 main {
     height: 70vh; /* vh 화면의 수직의 높이를 지정 */
+    
 }
 
 
@@ -40,6 +42,7 @@ footer > ul{
     list-style: none;
     justify-content: right;
     padding: 5px 10px;
+    
 }
 
 

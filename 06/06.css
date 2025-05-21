@@ -5,4 +5,5 @@
 .mdiv > button {
     height: 40px;
     width: 156px;
+    background-color: gray;
 }
