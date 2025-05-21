@@ -1,0 +1,8 @@
+.mdiv {
+    margin: 10px;
+}
+
+.mdiv > button {
+    height: 40px;
+    width: 156px;
+}
