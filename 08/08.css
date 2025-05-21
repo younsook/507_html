@@ -1,0 +1,54 @@
+form{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap; /*넘치면 다음줄로 내려가*/
+    padding: 10px;
+    background-color: rgb(255, 253, 253);
+    border: 1px dotted gray;
+}
+
+.mdiv{
+    width: 45%;
+    height: 50px;
+    margin-left: 30px;
+}
+.mdiv > select{
+    width: 80%;
+    height: 40px;
+}
+.mdiv > input{
+    width: 60%;
+    height: 30px;
+    
+}
+[readonly]{
+    background-color: beige;
+}
+
+
+/* .mdiv > input, .mdiv>select {
+    height: 40px;
+} */
+
+/* .mdiv1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+
+}
+.mdiv2{
+    margin: 10px;
+    width: 170px;
+}
+
+.mdiv3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+
+}
+.mdiv4{
+    margin: 10px;
+} */
