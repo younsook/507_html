@@ -1,0 +1,18 @@
+input, button {
+    height: 40px;
+}
+
+input {
+    height: 35px;
+    width: 150px;
+}
+
+#btArea > button {
+   
+    width: 100px;
+    background-color: cornflowerblue;
+}
+
+#btArea {
+     display: none;
+}
