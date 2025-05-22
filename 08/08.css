@@ -10,7 +10,10 @@ form{
 .mdiv{
     width: 45%;
     height: 50px;
-    margin-left: 30px;
+    margin-left: 5%;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
 }
 .mdiv > select{
     width: 80%;
@@ -18,11 +21,22 @@ form{
 }
 .mdiv > input{
     width: 60%;
-    height: 30px;
+    height: 35px;
     
 }
 [readonly]{
     background-color: beige;
+}
+
+label {
+    font-weight: 600;
+}
+[for = txt1]{
+    color: blue;
+}
+
+[for = txt2]{
+    color: green;
 }
 
 
