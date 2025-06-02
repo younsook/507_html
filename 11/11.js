@@ -78,7 +78,7 @@ const getMvList = (dt, ul, gubun)=>{
                 }
 
                 return `
-                    <li onClick="getPoster('${item.movieNm}')">
+                    <li data-mv="${item.movieNm}" onClick="getPoster('${item.movieNm}')">
                         <span class="spRank">${item.rank}</span>
                         <span class="spMv">${item.movieNm}</span>
                         <span class="spIn">
@@ -134,5 +134,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
         console.log(gubun);
     });
    
+    ul.addEventListener("mouseover", (e) => {
+    const li = e.target.closest("li");
+    if (!li) return;
+    const mvNm = li.dataset.mv;
+    getPoster(mvNm);
+    });
 
 });
