@@ -16,23 +16,55 @@ const yesterday = () =>{
     // return year+String(month).padStart(2,'0')+String(day).padStart(2,'0');
 
 }
+const getPoster =(mvNm) =>{
+    console.log("getPoster",mvNm);
+    const tmdbApi = "b42483d9af611184a5e87b9980e11075";  // TMDb API key
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${tmdbApi}&query=${mvNm}&language=ko`;
+    const poster = document.querySelector(".poster") ;
 
-const getMvList = (dt, ul)=>{
+    fetch(url)
+    .then(resp => resp.json())
+    .then(data => {
+       // console.log("TMDb 검색 결과:", data);
+        poster.innerHTML =`<img src="https://image.tmdb.org/t/p/w500${data.results[0].poster_path}">`
+
+           /* if (data.results && data.results.length > 0) {
+                const posterPath = data.results[0].poster_path;
+                document.querySelector("#posterImg").src = `https://image.tmdb.org/t/p/w500${posterPath}`;
+            } else {
+                document.querySelector("#posterImg").src = "";
+            }*/
+        })
+    .catch(err => console.log("TMDb 호출 에러:", err));
+
+}
+const getMvList = (dt, ul, gubun)=>{
     console.log("dt="+dt);
-      const url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=4e2527f0c86fcfcca9b834df20594013&targetDt="+dt;
+    const apikey = "4e2527f0c86fcfcca9b834df20594013";
+      let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${apikey}&targetDt=${dt}`;
         
+      if(gubun =="r2"){ //독립예술영화
+        url = `${url}&multiMovieYn=Y`;
+      } else if(gubun =="r3"){ //상업영화(일반)
+        url = `${url}&multiMovieYn=N`;
+      }
+    console.log("선택된 gubun 값:", gubun);
+      console.log("최종 호출 URL:", url);
+
+
         fetch(url)
         // .then(resp => console.log(resp)) //여기로 온다.
         .then(resp => resp.json())
         .then(data => {
             // console.log(data.boxOfficeResult.dailyBoxOfficeList)
             const dailyBoxOfficeList = data.boxOfficeResult.dailyBoxOfficeList;
-            //console.log(dailyBoxOfficeList);
+            console.log("받아온 dailyBoxOfficeList:", dailyBoxOfficeList); 
 
             // 영화 제목을 <li> 태그로 감싸기
             const mvList = dailyBoxOfficeList.map((item)=> 
                     // console.log(item.movieNm)); // 영화 제목만 추출
           {
+                const mv = encodeURIComponent(item.movieNm);
                 const rankInten = parseInt(item.rankInten); // 숫자 변환
                 let iconSrc = "";
 
@@ -46,7 +78,7 @@ const getMvList = (dt, ul)=>{
                 }
 
                 return `
-                    <li>
+                    <li onClick="getPoster('${item.movieNm}')">
                         <span class="spRank">${item.rank}</span>
                         <span class="spMv">${item.movieNm}</span>
                         <span class="spIn">
@@ -70,8 +102,11 @@ const getMvList = (dt, ul)=>{
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    const ul = document.querySelector("main > ul");
+    const ul = document.querySelector(".mvul");
     const dtIn = document.querySelector("#dt");
+    const bt = document.querySelector("#bt");
+    
+
     //어제 날짜 이후 선택 불가
     dtIn.setAttribute("max", yesterday());
 
@@ -80,15 +115,24 @@ document.addEventListener("DOMContentLoaded", ()=>{
     //default 어제날짜 출력
     dtIn.value = yesterday();
     getMvList(dtIn.value.replaceAll('-',''), ul);
-    
+    console.log(yesterday());
 
-    
+    // 기본 전체 조회 (초기값은 전체)
+    const defaultGubun = document.querySelector("[type=radio]:checked").value;
+    getMvList(dtIn.value.replaceAll('-', ''), ul, defaultGubun);
 
 
     dtIn.addEventListener('change', ()=>{
-        getMvList(dtIn.value.replaceAll('-',''), ul);
+        getMvList(dtIn.value.replaceAll('-',''), ul, "");
     });
     
-    
+    bt.addEventListener("click", (e)=>{
+        e.preventDefault();
+        const gubun = document.querySelector("[type=radio]:checked").value;
+        document.querySelector(".poster").innerHTML = "" ; 
+        getMvList(dtIn.value.replaceAll('-',''), ul, gubun);
+        console.log(gubun);
+    });
+   
 
 });

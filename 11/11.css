@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 .divDt, .mvul {
     /* list-style: none; */
     flex-direction: column;
     display: flex;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .mvul > li{
@@ -41,7 +44,8 @@
     color: rgb(182, 72, 53);
 } */
 
-.divDt {
+.divDt, .divRadio{
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(241, 241, 241);
@@ -59,4 +63,41 @@
 
 .spMv {
     flex: 1; /* 나머지 공간을 모두 차지 */
+}
+
+.divRadio{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  
+}
+input[type=radio]{
+    
+    margin-right: 5px;
+}
+
+.rBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.poster {
+    margin-left: 30px;
+    width: 200px;
+    height: 220px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
