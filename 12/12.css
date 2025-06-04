@@ -1,0 +1,101 @@
+#pMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* .pt1, .content {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+} */
+
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80%;
+  height: 60px;
+  background-color: rgb(241, 241, 241);
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+   border-radius: 11px;
+    border: 1px dotted rgb(102, 100, 100);
+}
+
+.formDiv > input {
+    height: 30px;
+}
+
+.formDiv > button {
+    height: 35px;
+    width: 90px;
+    margin-left: 10px;
+}
+
+.content {   
+    width: 80%;
+    border: 1px dotted rgb(230, 137, 24);
+    height: 60vh;
+    padding: 10px;
+    overflow-y: auto; /*flex박스 컨테이너 높이 세로 스크롤바*/
+
+    display: flex;
+    justify-content: start; 
+    flex-flow: wrap; /*flex박스 안의 내용 자동 줄바꿈 wrap*/
+    
+}
+
+
+.card {
+    width: 30%;
+    height: 180px;
+    border: 1px dotted rgb(145, 155, 151);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    margin: 5px;
+}
+.cardImg {
+    width: 100%;
+    height: 90px; /* 원하는 고정 높이 지정 */
+    overflow: hidden;  /* 혹시 오버되는 부분 잘라내기 */
+}
+
+.cardImg > img {
+    width: 100%;  
+    height: auto;
+    object-fit: cover;
+}
+
+.cardDiv {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cardDiv > span {
+    display: flex;
+}
+
+.sp1{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.sp2{
+    font-size: 12px;
+}
