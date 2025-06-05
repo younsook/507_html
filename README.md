@@ -1,8 +1,4 @@
 # k-digital 2025
-## HTML
-1. HTML 기초
-2. 수정
----
-## CSS
-## JS
-    
+## Hosting 주소
+vercel hosting    
+-> https://507-html.vercel.app/
