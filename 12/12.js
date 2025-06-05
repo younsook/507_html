@@ -1,7 +1,7 @@
 //데이터 가져오기
 const getData = (txt1, content)=>{ //파라미터값은 보낸변수명과 다르게써도 된다. 
 
-    const apikey = "eqSHOKrYncg22pKeXCqDnzcYIooHl2rhaO4YyYBOfwNEmA46PeoOBAV9IGTz%2BqcrD%2F4g2v%2Bwh5du0FLLl1wvcw%3D%3D";
+    const apikey = "";
     const baseUrl = "https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?";
     let url = `${baseUrl}serviceKey=${apikey}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&keyword=${txt1.value}&_type=json`;
 
